@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="home-page page">
       <div className="content-wrapper">
-        <p>Hi! I'm Bharadwaj.</p>
+        <p>Hi! I&apos;m Bharadwaj.</p>
         <p>
           I build software, make art and often ponder on the significance of
           reality. I had previously run Chakra, a design agency and web
