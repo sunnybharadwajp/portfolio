@@ -8,10 +8,10 @@ export default function Home() {
         <p>Hi! I&apos;m Bharadwaj.</p>
         <p>
           I build software, make art and often ponder on the significance of
-          reality. I had previously run Chakra, a design agency and web
+          reality itself. I had previously run Chakra, a design agency and web
           development consultancy for SMEs, primarily Startups. At the moment, I
-          work on freelance projects, building full-stack tools for all
-          platforms.
+          take up freelance projects and build full-stack tools for all
+          platforms independently.
         </p>
         <Socials />
       </div>

@@ -4,27 +4,25 @@ import { ExternalLink, Mail, Phone } from 'lucide-react';
 
 export default function Socials() {
   return (
-    <section className="flex flex-col sm:flex-row gap-3 sm:gap-5 items-center justify-center">
-      <Link
-        href="mailto:sunnybharadwajp@gmail.com"
-        className="social-link w-full sm:w-auto text-center flex justify-center"
-      >
+    <section className="social-links-section">
+      <Link href="mailto:sunnybharadwajp@gmail.com" className="social-link">
         <Mail size={18} />
         sunnybharadwajp@gmail.com
       </Link>
-      <Link
-        href="tel:+917842810070"
-        className="social-link w-full sm:w-auto text-center flex justify-center"
-      >
+      <Link href="tel:+917842810070" className="social-link">
         <Phone size={18} />
         +917842810070
       </Link>
       <Link
-        href="https://twitter.com/"
-        className="social-link w-full sm:w-auto text-center flex justify-center"
+        href="https://www.linkedin.com/in/sunnybharadwaj/"
+        className="social-link"
       >
         <ExternalLink size={18} />
         LinkedIn
+      </Link>
+      <Link href="https://github.com/sunnybharadwajp" className="social-link">
+        <ExternalLink size={18} />
+        GitHub
       </Link>
     </section>
   );
