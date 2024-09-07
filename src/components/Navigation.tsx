@@ -1,25 +1,27 @@
-import Link from 'next/link';
+'use client';
+
+import { Sun, Moon } from 'lucide-react';
+import { useTheme } from '@/components/ThemeProvider';
 
 export default function Navigation() {
-	return (
-		<nav className="site-nav">
-			<ul>
-				<li>
-					<Link href="/">Home</Link>
-				</li>
-				<li>
-					<Link href="/site/work">Work</Link>
-				</li>
-				<li>
-					<Link href="/site/projects">Projects</Link>
-				</li>
-				<li>
-					<Link href="/site/blog">Blog</Link>
-				</li>
-				<li>
-					<Link href="/site/services">Services</Link>
-				</li>
-			</ul>
-		</nav>
-	);
+  const { theme, toggleTheme } = useTheme();
+
+  function handleThemeToggle() {
+    toggleTheme();
+  }
+
+  return (
+    <nav>
+      <div className="left">
+        <div className="slot-machine"></div>
+      </div>
+      <div className="right">
+        <button onClick={handleThemeToggle}>
+          <div className="nav-button">
+            {theme === 'dark' ? <Sun /> : <Moon />}
+          </div>
+        </button>
+      </div>
+    </nav>
+  );
 }

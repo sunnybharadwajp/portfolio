@@ -1,4 +1,4 @@
 - [x] Update linkedIn link
 - [x] Add Github link
 - [] Download Resume button and link file
--
+- [] adjust vertical link spacing for mobile
