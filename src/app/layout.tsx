@@ -22,25 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            (function() {
-              function getInitialTheme() {
-                const savedTheme = localStorage.getItem('theme');
-                if (savedTheme) return savedTheme;
-                
-                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-              }
-              
-              document.body.classList.add(getInitialTheme());
-            })();
-          `
-        }} />
-      </head>
+    <html lang="en" suppressHydrationWarning>
       <body className={lato.className}>
-        <ThemeProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navigation />
           {children}
         </ThemeProvider>

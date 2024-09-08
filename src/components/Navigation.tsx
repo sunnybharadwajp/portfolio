@@ -2,12 +2,22 @@
 
 import { Sun, Moon } from 'lucide-react';
 import { useTheme } from '@/components/ThemeProvider';
+import { useEffect, useState } from 'react';
 
 export default function Navigation() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   function handleThemeToggle() {
-    toggleTheme();
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  }
+
+  if (!mounted) {
+    return null;
   }
 
   return (
